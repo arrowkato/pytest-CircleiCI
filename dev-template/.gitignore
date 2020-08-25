@@ -182,3 +182,11 @@ dmypy.json
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python
+
+
+# 以下、作者の設定
+# インストールできるファイル郡は対象外に
+.venv
+# pyenvによるバージョン指定ファイルも除外
+.python-version
+
