@@ -25,8 +25,12 @@ pyenv global 3.8.5
 ```
 
 
-特定のディレクトリ配下に移動し実行すると
+特定のディレクトリ配下に移動して、実行するとそのディレクトリ向けのバージョンを指定できる  
 ```zsh
 cd <your_directory>
-pyenv local 3.8.5
+pyenv local 3.7.9
 ```
+特にこだわりがなければ、このコマンドを指定せず。
+ ``` pyenv global  ``` で指定したバージョンをそのまま使っていいと思います。  
+pyenv localで指定したバージョンは、
+<your_directory>/.python-version ファイルに記載されています。
