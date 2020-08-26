@@ -1,0 +1,16 @@
+{
+    // pyenvでインストールした,Pythonを使う
+    "python.pythonPath": "~/.pyenv/versions/3.8.5/bin/python",
+    // linter の実行を許可
+    "python.linting.enabled": true,
+    // linterにはflake8を使う
+    "python.linting.flake8Enabled": true,
+    // flake8を使うのでpylintはoffにする
+    "python.linting.pylintEnabled": false,
+    // 保存時に自動でlinterを実行
+    "python.linting.lintOnSave": true,
+    // yapfを使用(デフォルトでは、autopep8)
+    "python.formatting.provider": "yapf",
+    // 保存時にオートフォーマット
+    "editor.formatOnSave": true
+}

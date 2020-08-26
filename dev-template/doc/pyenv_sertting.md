@@ -34,3 +34,35 @@ pyenv local 3.7.9
  ``` pyenv global  ``` で指定したバージョンをそのまま使っていいと思います。  
 pyenv localで指定したバージョンは、
 <your_directory>/.python-version ファイルに記載されています。
+
+
+### 実際に使われているPythonのパスの確認
+
+```zsh
+python
+```
+
+interpreterが起動するので、以下をコピペしてください。
+```
+import sys 
+sys.exec_prefix
+sys.executable
+```
+
+### VSCodeで使うPythonのpath設定
+
+vscodeの設定で、Python XXXXX のところをクリック してください。
+
+![スタータスバー](./status_bar.png)
+
+install されているpythonの一覧が出ます。
+
+![スタータスバー](./installed_python_list.png)
+先程確認した
+pythonのインストールディレクトリを選択してください。
+
+git cloneした場合は、 ``` $HOME/.vscode/settings.json ``` で
+下記を設定済みです。
+```
+"python.pythonPath": "~/.pyenv/versions/3.8.5/bin/python",
+```

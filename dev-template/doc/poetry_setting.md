@@ -23,7 +23,7 @@ poetry config --list
 ```
 virtualenvs.in-project true になっていればOK
 
-dev-templateという開発環境を作成
+dev-templateという開発用directoryを作成
 ```zsh
 poetry new dev-template
 ```
@@ -32,11 +32,23 @@ poetry new dev-template
 
 
 ## コマンド
+[公式docの日本語訳](https://cocoatomo.github.io/poetry-ja/basic-usage/)
 
-poetry install 
+```zsh
+cd <開発用directory>
+poetry add <パッケージ名>
+```
+例) ``` poetry add flake8 ```
 
+インストールパッケージの一覧表示
+```zsh
 poetry show
+```
 
 
+インストールパッケージの削除
+```zsh
+poetry remove <パッケージ名>
+```
 
 
