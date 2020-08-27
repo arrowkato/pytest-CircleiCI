@@ -12,3 +12,8 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 [poetryの設定](./doc/poetry_setting.md)
 
 [linterとformatter](./doc/linter_formatter_sertting.md)
+
+[型チェッカー](./doc/static_type_checker.md)
+
+
+
