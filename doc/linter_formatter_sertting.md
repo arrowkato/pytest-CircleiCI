@@ -1,5 +1,5 @@
-# 目標
-VSCodeでの保存時に自動整形
+# 目標1
+VSCodeでの保存時にPythonファイルを自動整形
 
 
 ## 関連情報
@@ -8,7 +8,7 @@ VSCodeでの保存時に自動整形
 - [VSCodeのPython開発環境でpylintの代わりにflake8を導入し自動整形を設定する](https://qiita.com/psychoroid/items/2c2acc06c900d2c0c8cb)
 - [Blackできれいに自動整形！flake8とBlack導入と実行](https://qiita.com/tsu_0514/items/2d52c7bf79cd62d4af4a)
 - [VS Code コーディング規約を快適に守る](https://qiita.com/firedfly/items/00c34018581c6cec9b84)
-- [python PEP8 VSCodeでautopep8とflake8を適用する](http://trelab.info/visual-studio-code/python-vscode%E3%81%A7autopep8%E3%82%92%E9%81%A9%E7%94%A8%E3%81%99%E3%82%8B/) 
+- [python PEP8 VSCodeでautopep8とflake8を適用する](http://trelab.info/visual-studio-code/python-vscode%E3%81%A7autopep8%E3%82%92%E9%81%A9%E7%94%A8%E3%81%99%E3%82%8B/)
 - [超簡単VSCodeでPythonソースコード自動チェック・整形（venv・flake8・mypy・black利用](https://note.com/10mohi6/n/n87e7867bfb79)
 - [これで決まり！最強自動コード整形ツール3選！](https://www.kimoton.com/entry/20181223/1545540702)
 
@@ -26,7 +26,7 @@ poetry add flake8
 VSCodeを使っていると、Linter pylint is not installed というポップアップが出てきますが、
 Do not show again　を選んでおきましょう。
 
-1. ツールバー Code -> 基本設定 → 設定[⌘,]をクリック 
+1. ツールバー Code -> 基本設定 → 設定[⌘,]をクリック
 2. 検索欄に python.linting.flake8Enable を入力
 3. Whether to lint Python file using flake8 をチェック
 
@@ -62,3 +62,15 @@ poetry add yapf
 きれいに整形されたなら、正常に動作しています。
 
 [想定しているbefore after](https://github.com/google/yapf#example)
+
+
+# 目標2
+Dockerfileのチェック
+
+VSCodeで[hadolint](https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint)をインストールしておいてください。
+
+任意ですが、[hadolintの公式](https://github.com/hadolint/hadolint#install)に従って、CLIのhadolintもインストールしておくと
+後々役に立つかもしれないです。
+
+チェック条件を緩めるためには, <project_root_dir>/.hadolint.yaml を編集してください。
+デフォルトでは、[DL3026](https://github.com/hadolint/hadolint/wiki/DL3026)のチェックをしないようにしています。
