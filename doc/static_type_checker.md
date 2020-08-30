@@ -42,7 +42,8 @@ pyright拡張機能をアクティブにするには、[ドキュメント](http
 # 設定方法
 
 使い始めた瞬間Pyrightってクソじゃんってならないために、
-[Pyrightで型チェックしたいのにimportで怒られるときの対処法](https://qiita.com/tenajima/items/81e0ea8ef70b954f7f0f)
+- [Import Resolution](https://github.com/Microsoft/pyright/blob/master/docs/import-resolution.md)
+- [Pyrightで型チェックしたいのにimportで怒られるときの対処法](https://qiita.com/tenajima/items/81e0ea8ef70b954f7f0f)
 
 プロジェクトルート直下に pyrightconfig.json を作成してください。
 
