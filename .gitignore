@@ -188,4 +188,5 @@ dmypy.json
 # インストールできるファイル郡は対象外に
 .venv
 
-
+# Dockerで起動するmysqlのデータはgitに登録しない
+mysql
