@@ -1,0 +1,18 @@
+version: 2.1
+
+
+jobs:
+  build-and-test:
+    docker:
+        - image arrowkato/python-template
+    steps:
+      - checkout
+      - run: cd
+      - run:
+          command: poetry run pytest
+          name: Test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test

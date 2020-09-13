@@ -15,3 +15,7 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 
 ~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていない
 
+
+
+# CircleCI
+[CircleCIの設定](./doc/circleci_setting.md)
