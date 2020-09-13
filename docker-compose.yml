@@ -1,0 +1,17 @@
+version: '3'
+services:
+    # 名前は何でも
+    python:
+        # ビルド対象は、<pj_root_dir>のDockerfile
+        build:
+            context: .
+            dockerfile: Dockerfile
+        # containerの名前
+        container_name: app
+        # ホストの<pj_root_dir>/src を コンテナの/codeにバインドマウント
+        volumes:
+            - ./src:/code
+        # 起動しつづける
+        tty: true
+
+    # mysqlなど必要なコンテナがあれば追記してください。

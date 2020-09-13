@@ -13,7 +13,5 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 
 [linterとformatter](./doc/linter_formatter_sertting.md)
 
-~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれいていない
-
-
+~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていない
 

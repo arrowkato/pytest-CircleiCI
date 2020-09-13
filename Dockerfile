@@ -13,12 +13,15 @@ ENV PYTHONUNBUFFERED 1
 # poetryはapt-getに入っていないのでpip経由でいれる
 RUN pip install poetry==1.0.10
 
+RUN mkdir /install
+WORKDIR /install
+# poetryでインストールしているパッケージをコンテナ側でもインストールさせる
+COPY ./dev-template/poetry.lock /install/
+COPY ./dev-template/pyproject.toml /install/
+RUN poetry install
+
 RUN mkdir /code
 WORKDIR /code
-# poetryでインストールしているパッケージをコンテナ側でもインストールさせる
-COPY ./dev-template/poetry.lock /code/
-COPY ./dev-template/pyproject.toml /code/
-RUN poetry install
 
 
 
