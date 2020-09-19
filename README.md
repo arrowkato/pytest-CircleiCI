@@ -15,21 +15,10 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 
 ~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていないです。
 
+# testing framework
+[pytest](./doc/pytest_setting.md)
 
-# Testing Framework
-[PythonのTesting frameworkはいくつかあります](https://www.softwaretestinghelp.com/python-testing-frameworks/)。
-[pytest](https://docs.pytest.org/en/stable/)を使います。
+# CircleCI
+[CircleCIの設定](./doc/circleci_setting.md)
 
-testコードは、<pj_root_dir>/test に配置してください。
-テストコードを書くファイルは、test_<テストしたいファイル> にするのが一般的です。
-e.g
-- テスト対象のファイル: src/four_basic_arithmetic_operations.py
-- テストコードのファイル: tests/tests_four_basic_arithmetic_operations.py
-
-テストの実行方法
-```zsh
-poetry run pytest
-```
-
-少し高度ですが、例外を含めて設計、実装できていることのテストまで行うと堅牢なコードになり、バグが起こりにくくなります。
-[Pythonでpytestを試してみる(pytest 例外発生テスト)](https://qiita.com/__init__/items/fde37a3f28d6b17a9ce1)
+なぜか、DockerHubに登録したimageにgitがはいっていないので、そこから

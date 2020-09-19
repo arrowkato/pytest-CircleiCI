@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  execute-pytest:
+    docker:
+        - image: arrowkato/python-template:latest
+    steps:
+        - checkout
+        - run:
+            name: install_dependencies
+            command: |
+              poetry install
+            working_directory: /root/project/dev-template
+        # 設定(checkoutとpackegeのインストール)とpytestの実行は分けても良さそう
+        - run:
+            name: execute_test
+            command: |
+              poetry run pytest
+            working_directory: /root/project/dev-template
+
+workflows:
+  main:
+    jobs:
+      - execute-pytest
+
