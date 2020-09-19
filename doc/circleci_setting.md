@@ -21,3 +21,8 @@ brew install circleci
 
 ## CircleCIで使用するDocker Imageを登録する
 [GitHubのDockerfileを自動的にビルドして、Dockerhubに登録する方法](https://qiita.com/kon_yu/items/7c40f4dfbd1cce006ce7#github%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B%E3%82%AA%E3%82%B9%E3%82%B9%E3%83%A1) があります。
+
+GitHubに登録しているDockerfileをDockerHubに自動ビルドするときの設定例は下記です。
+ ![設定はこんなかんじ](./corperation_GitHub_DockerHub.png)
+
+

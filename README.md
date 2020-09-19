@@ -13,9 +13,12 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 
 [linterとformatter](./doc/linter_formatter_sertting.md)
 
-~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていない
+~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていないです。
 
-
+# testing framework
+[pytest](./doc/pytest_setting.md)
 
 # CircleCI
 [CircleCIの設定](./doc/circleci_setting.md)
+
+なぜか、DockerHubに登録したimageにgitがはいっていないので、そこから
