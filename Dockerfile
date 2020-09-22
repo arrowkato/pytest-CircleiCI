@@ -9,10 +9,10 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends git \
     default-mysql-client \
     # 不要なら消してください。
-    vim less
-# 後で戻す
-#&& apt-get clean \
-#&& rm -rf /var/lib/apt/lists/*
+    vim less \
+    # Docker imageのサイズ削減
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 
 # poetryはapt-getに入っていないのでpip経由でいれる
