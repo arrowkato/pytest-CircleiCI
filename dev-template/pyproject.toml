@@ -8,6 +8,7 @@ authors = ["arrowkato"]
 python = "^3.8"
 flake8 = "^3.8.3"
 yapf = "^0.30.0"
+mysql-connector-python = "^8.0.21"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -1,0 +1,8 @@
+# dev-template環境直下
+.pytest_cache
+
+# dev_template.egg-infoも不要ならgit登録から外したい
+
+# サブフォルダ
+src/__pycache__
+tests/__pycache__
