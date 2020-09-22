@@ -1,5 +1,26 @@
 version: '3'
 services:
+    mysql_container:
+        # imageはMySQL公式のほうが良さそう
+        # なおかつ、データを入れるところを工夫しておく必要あり。docker volumeで共有 or docker imageにいれておくとか
+        build:
+            context: ./mysql
+            dockerfile: Dockerfile
+        restart: always
+        environment:
+            MYSQL_DATABASE: sample_db
+            MYSQL_USER: user
+            # パスワードなので、公開しない
+            MYSQL_PASSWORD: password
+            # root userのパスワードなので公開しない
+            MYSQL_ROOT_PASSWORD: rootpassword
+        ports:
+        - "3306:3306"
+        # ./mysql/Dockerfileからではなく、docker-compose.ymlからの相対パスであることに注意
+        volumes:
+        - ./mysql/docker/mysql/initdb.d:/docker-entrypoint-initdb.d
+        - ./mysql/docker/mysql/conf.d:/etc/mysql/conf.d
+        - ./mysql/log/mysql:/var/log/mysql
     # 名前は何でも
     python:
         # ビルド対象は、<pj_root_dir>のDockerfile
@@ -8,10 +29,11 @@ services:
             dockerfile: Dockerfile
         # containerの名前
         container_name: app
+        links:
+            - mysql_container
         # ホストの<pj_root_dir>/src を コンテナの/codeにバインドマウント
         volumes:
-            - ./src:/code
+            - ./dev-template:/code/dev-template
+        stdin_open: true
         # 起動しつづける
         tty: true
-
-    # mysqlなど必要なコンテナがあれば追記してください。

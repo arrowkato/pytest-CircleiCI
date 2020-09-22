@@ -7,28 +7,19 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     # CircleCI用にgitを追加
     && apt-get -y install --no-install-recommends git \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    default-mysql-client \
+    # 不要なら消してください。
+    vim less
+# 後で戻す
+#&& apt-get clean \
+#&& rm -rf /var/lib/apt/lists/*
 
 
 # poetryはapt-getに入っていないのでpip経由でいれる
 RUN pip install poetry==1.0.10
 
-RUN mkdir /install
-WORKDIR /install
-# poetryでインストールしているパッケージをコンテナ側でもインストールさせる
-COPY ./dev-template/poetry.lock /install/
-COPY ./dev-template/pyproject.toml /install/
-RUN poetry install
-
-RUN mkdir /code
-WORKDIR /code
-
-
-
-
-
-
-
+# dev-template はプロジェクトごとに変更してください。
+RUN mkdir -p /code/dev-template
+WORKDIR /code/dev-template
 
 

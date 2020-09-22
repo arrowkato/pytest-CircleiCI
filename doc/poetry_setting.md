@@ -51,4 +51,23 @@ poetry show
 poetry remove <パッケージ名>
 ```
 
+CLIからのpythonファイルの実行
+'''zsh
+poetry run python mysql_connector_sample.py
+'''
+単純に下記コマンドだと、デフォルトでインストールされているpythonが呼び出されるので、
+poetryでインストールしたパッケージが反映されないことに注意してください。
+'''zsh
+python mysql_connector_sample.py
+'''
+
+# IDEにpoetryの仮想環境を認識させる
+## PyCharm
+[PyCharmとの連携](https://qiita.com/toto1310/items/ffb3a9ae6d1d26554932#pycharm%E3%81%A8%E3%81%AE%E9%80%A3%E6%90%BA)
+
+PyCharm（2019.03）なら、pyproject.tomlを認識して、仮想環境を検出してくれた。 とのこと。
+
+## VSCodeとの連携
+https://qiita.com/toto1310/items/ffb3a9ae6d1d26554932#vitual-studio-code%E3%81%A8%E3%81%AE%E9%80%A3%E6%90%BA
+
 

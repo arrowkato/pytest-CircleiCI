@@ -44,7 +44,7 @@ python
 
 interpreterが起動するので、以下をコピペしてください。
 ```
-import sys 
+import sys
 sys.exec_prefix
 sys.executable
 ```
