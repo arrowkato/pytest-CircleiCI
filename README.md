@@ -34,7 +34,7 @@ pyenv自体は、Pythonのバージョン切り替え目的なので、Dockerで
 
 ~~[型チェッカー](./doc/static_type_checker.md)~~ 設定方法まで調べきれていないです。
 
-[MySQL on Docker]
+[MySQL on Dockerの設定](./doc/mysql_setting.md)
 
 # testing framework
 [pytest](./doc/pytest_setting.md)
