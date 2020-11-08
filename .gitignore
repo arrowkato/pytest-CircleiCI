@@ -188,3 +188,5 @@ dmypy.json
 # インストールできるファイル郡は対象外に
 .venv
 
+# いらんやつ
+docker-runtime
