@@ -1,0 +1,4 @@
+# Dockerfile およびdockerディレクトリ配下のファイルはgitに登録する
+
+# logフォルダは不要
+log
